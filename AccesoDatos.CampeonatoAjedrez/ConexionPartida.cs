@@ -1,4 +1,4 @@
-﻿using Entidades.TorneoAjedrez;
+﻿using Entidades.CampeonatoAjedrez;
 using System;
 using System.Collections.Generic;
 using System.Data;

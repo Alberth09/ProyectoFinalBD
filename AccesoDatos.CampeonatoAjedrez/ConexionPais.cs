@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Windows.Forms;
 using System.Data;
-using Entidades.TorneoAjedrez;
+using Entidades.CampeonatoAjedrez;
 
 namespace AccesoDatos.CampeonatoAjedrez
 {

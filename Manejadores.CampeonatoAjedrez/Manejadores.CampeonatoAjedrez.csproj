@@ -64,7 +64,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="ManejadorHospedaje.cs" />
+    <Compile Include="ManejadorHotel.cs" />
+    <Compile Include="ManejadorMovimiento.cs" />
+    <Compile Include="ManejadorPais.cs" />
+    <Compile Include="ManejadorParticipante.cs" />
+    <Compile Include="ManejadorPartida.cs" />
+    <Compile Include="ManejadorRol.cs" />
+    <Compile Include="ManejadorSala.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
