@@ -36,7 +36,7 @@ namespace AccesoDatos.CampeonatoAjedrez
         {
             try
             {
-                string consulta = string.Format("UPDATE participante SET nombre='{0}',direccion='{1}',telefono='{2}',campeonato='{3}',tipo={4},nivel='{5}',fkIDPais={6} WHERE idParticipante={7}", participante.Nombre, participante.Direccion, participante.Telefono, participante.Campeonato,participante.Tipo,participante.Nivel,participante.FkIDPais,participante.IDParticipante);
+                string consulta = string.Format("UPDATE participante SET nombre='{0}',direccion='{1}',telefono='{2}',tipo={3},nivel='{4}',fkIDPais={5} WHERE idParticipante={6} AND campeonato='{7}'", participante.Nombre, participante.Direccion, participante.Telefono,participante.Tipo,participante.Nivel,participante.FkIDPais,participante.IDParticipante, participante.Campeonato);
                 conexion.EjecutarConsulta(consulta);
             }
             catch (Exception ex)
@@ -44,11 +44,11 @@ namespace AccesoDatos.CampeonatoAjedrez
                 MessageBox.Show("No se pudo actualizar: " + ex.Message, "Error");
             }
         }
-        public void EliminarParticipante(int participante)
+        public void EliminarParticipante(int participante,string campeonato)
         {
             try
             {
-                string consulta = string.Format("DELETE FROM participante WHERE idParticipante={0}", participante);
+                string consulta = string.Format("DELETE FROM participante WHERE idParticipante={0} AND campeonato='{1}'", participante,campeonato);
                 conexion.EjecutarConsulta(consulta);
             }
             catch (Exception ex)
@@ -77,7 +77,7 @@ namespace AccesoDatos.CampeonatoAjedrez
                         Direccion = row["direccion"].ToString(),
                         Telefono = row["telefono"].ToString(),
                         Campeonato = row["campeonato"].ToString(),
-                        Tipo = int.Parse(row["tipo"].ToString()),
+                        Tipo = row["tipo"].ToString(),
                         Nivel = row["nivel"].ToString(),
                         FkIDPais = int.Parse(row["fkIDPais"].ToString())
                     };

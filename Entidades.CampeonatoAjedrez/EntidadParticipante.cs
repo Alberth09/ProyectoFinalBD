@@ -7,7 +7,7 @@
         private string _direccion;
         private string _telefono;
         private string _campeonato;
-        private int _tipo;
+        private string _tipo;
         private string _nivel;
         private int _fkIDPais;
 
@@ -16,7 +16,7 @@
         public string Direccion { get => _direccion; set => _direccion = value; }
         public string Telefono { get => _telefono; set => _telefono = value; }
         public string Campeonato { get => _campeonato; set => _campeonato = value; }
-        public int Tipo { get => _tipo; set => _tipo = value; }
+        public string Tipo { get => _tipo; set => _tipo = value; }
         public string Nivel { get => _nivel; set => _nivel = value; }
         public int FkIDPais { get => _fkIDPais; set => _fkIDPais = value; }
     }

@@ -15,9 +15,9 @@ namespace Manejadores.CampeonatoAjedrez
         {
             conexion.ActualizarParticipante(pais);
         }
-        public void EliminarParticipante(int participante)
+        public void EliminarParticipante(int participante,string campeonato)
         {
-            conexion.EliminarParticipante(participante);
+            conexion.EliminarParticipante(participante,campeonato);
         }
         public List<EntidadParticipante> LeerParticipante()
         {

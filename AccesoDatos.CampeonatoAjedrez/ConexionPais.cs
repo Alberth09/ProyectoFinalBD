@@ -24,8 +24,16 @@ namespace AccesoDatos.CampeonatoAjedrez
         {
             try
             {
-                string consulta = string.Format("INSERT INTO pais VALUES({0},'{1}',{2},{3})", pais.IDPais, pais.Nombre, pais.NoClubes, pais.Representa);
-                conexion.EjecutarConsulta(consulta);
+                if (pais.Representa != "")
+                {
+                    string consulta = string.Format("INSERT INTO pais VALUES({0},'{1}',{2},{3})", pais.IDPais, pais.Nombre, pais.NoClubes, pais.Representa);
+                    conexion.EjecutarConsulta(consulta);
+                }
+                else
+                {
+                    string consulta = string.Format("INSERT INTO pais VALUES({0},'{1}',{2},null)", pais.IDPais, pais.Nombre, pais.NoClubes);
+                    conexion.EjecutarConsulta(consulta);
+                }
             }
             catch (Exception ex)
             {
@@ -36,8 +44,16 @@ namespace AccesoDatos.CampeonatoAjedrez
         {
             try
             {
-                string consulta = string.Format("UPDATE pais SET nombre='{0}',noClubes={1},representa={2} WHERE idPais={3}", pais.Nombre, pais.NoClubes, pais.Representa, pais.IDPais);
-                conexion.EjecutarConsulta(consulta);
+                if (pais.Representa != "")
+                {
+                    string consulta = string.Format("UPDATE pais SET nombre='{0}',noClubes={1},representa={2} WHERE idPais={3}", pais.Nombre, pais.NoClubes, pais.Representa, pais.IDPais);
+                    conexion.EjecutarConsulta(consulta);
+                }
+                else
+                {
+                    string consulta = string.Format("UPDATE pais SET nombre='{0}',noClubes={1},representa=null WHERE idPais={2}", pais.Nombre, pais.NoClubes, pais.IDPais);
+                    conexion.EjecutarConsulta(consulta);
+                }
             }
             catch (Exception ex)
             {
@@ -70,13 +86,19 @@ namespace AccesoDatos.CampeonatoAjedrez
 
                 foreach (DataRow row in dt.Rows)
                 {
+                    int id = int.Parse(row["idPais"].ToString());
+                    string nombre = row["nombre"].ToString();
+                    int noclubes = int.Parse(row["noClubes"].ToString());
+                    string representa = row["representa"].ToString();
+
+
                     var entidad = new EntidadPais
                     {
-                        IDPais = int.Parse(row["idPais"].ToString()),
-                        Nombre = row["nombre"].ToString(),
-                        NoClubes = int.Parse(row["noClubes"].ToString()),
-                        Representa = int.Parse(row["representa"].ToString())
-                    };
+                        IDPais = id,
+                        Nombre = nombre,
+                        NoClubes = noclubes,
+                        Representa = representa
+                    }; 
                     ListaResultados.Add(entidad);
                 }
                 return ListaResultados;
