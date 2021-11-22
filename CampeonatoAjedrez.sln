@@ -3,9 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31911.196
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entidades.CampeonatoAjedrez", "Entidades.CampeonatoAjedrez\Entidades.CampeonatoAjedrez.csproj", "{A58CF1D7-551A-47FB-9A84-2FD071CD963B}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Presentacion.CampeonatoAjedrez", "Presentacion.CampeonatoAjedrez\Presentacion.CampeonatoAjedrez.csproj", "{DD650E9D-86A2-401C-8E03-1994E678BF09}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccesoDatos.CampeonatoAjedrez", "AccesoDatos.CampeonatoAjedrez\AccesoDatos.CampeonatoAjedrez.csproj", "{949AE978-93BB-4A5B-A255-5CADEBC28086}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Entidades.CampeonatoAjedrez", "Entidades.CampeonatoAjedrez\Entidades.CampeonatoAjedrez.csproj", "{6D12176D-5BCE-465A-9A16-7997C5068071}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Manejadores.CampeonatoAjedrez", "Manejadores.CampeonatoAjedrez\Manejadores.CampeonatoAjedrez.csproj", "{37208315-1612-4CA5-8D21-4A6AC304A165}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,14 +17,22 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A58CF1D7-551A-47FB-9A84-2FD071CD963B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A58CF1D7-551A-47FB-9A84-2FD071CD963B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A58CF1D7-551A-47FB-9A84-2FD071CD963B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A58CF1D7-551A-47FB-9A84-2FD071CD963B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DD650E9D-86A2-401C-8E03-1994E678BF09}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DD650E9D-86A2-401C-8E03-1994E678BF09}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DD650E9D-86A2-401C-8E03-1994E678BF09}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DD650E9D-86A2-401C-8E03-1994E678BF09}.Release|Any CPU.Build.0 = Release|Any CPU
+		{949AE978-93BB-4A5B-A255-5CADEBC28086}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{949AE978-93BB-4A5B-A255-5CADEBC28086}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{949AE978-93BB-4A5B-A255-5CADEBC28086}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{949AE978-93BB-4A5B-A255-5CADEBC28086}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D12176D-5BCE-465A-9A16-7997C5068071}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D12176D-5BCE-465A-9A16-7997C5068071}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D12176D-5BCE-465A-9A16-7997C5068071}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D12176D-5BCE-465A-9A16-7997C5068071}.Release|Any CPU.Build.0 = Release|Any CPU
+		{37208315-1612-4CA5-8D21-4A6AC304A165}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37208315-1612-4CA5-8D21-4A6AC304A165}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{37208315-1612-4CA5-8D21-4A6AC304A165}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{37208315-1612-4CA5-8D21-4A6AC304A165}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

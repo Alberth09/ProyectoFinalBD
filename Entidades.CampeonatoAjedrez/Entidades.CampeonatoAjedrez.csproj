@@ -64,7 +64,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class1.cs" />
+    <Compile Include="EntidadHospedaje.cs" />
+    <Compile Include="EntidadHotel.cs" />
+    <Compile Include="EntidadMovimiento.cs" />
+    <Compile Include="EntidadPais.cs" />
+    <Compile Include="EntidadParticipante.cs" />
+    <Compile Include="EntidadPartida.cs" />
+    <Compile Include="EntidadRol.cs" />
+    <Compile Include="EntidadSala.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

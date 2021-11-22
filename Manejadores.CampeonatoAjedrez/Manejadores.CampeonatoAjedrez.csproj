@@ -71,5 +71,15 @@
     <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AccesoDatos.CampeonatoAjedrez\AccesoDatos.CampeonatoAjedrez.csproj">
+      <Project>{949ae978-93bb-4a5b-a255-5cadebc28086}</Project>
+      <Name>AccesoDatos.CampeonatoAjedrez</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entidades.CampeonatoAjedrez\Entidades.CampeonatoAjedrez.csproj">
+      <Project>{6d12176d-5bce-465a-9a16-7997c5068071}</Project>
+      <Name>Entidades.CampeonatoAjedrez</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

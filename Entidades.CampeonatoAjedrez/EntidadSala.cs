@@ -1,4 +1,4 @@
-﻿namespace Entidades.TorneoAjedrez
+﻿namespace Entidades.CampeonatoAjedrez
 {
     public class EntidadSala
     {
