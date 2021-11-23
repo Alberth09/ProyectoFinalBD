@@ -265,7 +265,7 @@ namespace Presentacion.CampeonatoAjedrez
             this.Controls.Add(this.label1);
             this.Name = "FrmModalJugadores";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Agregar jugadores.";
+            this.Text = "Agregar jugador.";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

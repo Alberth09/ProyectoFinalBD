@@ -69,6 +69,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmHoteles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHoteles.Designer.cs">
+      <DependentUpon>FrmHoteles.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmInicio.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,40 +87,88 @@
     <Compile Include="FrmJugadores.Designer.cs">
       <DependentUpon>FrmJugadores.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmModalHoteles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmModalHoteles.Designer.cs">
+      <DependentUpon>FrmModalHoteles.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmModalJugadores.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmModalJugadores.Designer.cs">
       <DependentUpon>FrmModalJugadores.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmModalPais.cs">
+    <Compile Include="FrmModalPaises.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmModalPais.Designer.cs">
-      <DependentUpon>FrmModalPais.cs</DependentUpon>
+    <Compile Include="FrmModalPaises.Designer.cs">
+      <DependentUpon>FrmModalPaises.cs</DependentUpon>
     </Compile>
-    <Compile Include="FrmPais.cs">
+    <Compile Include="FrmModalPartidas.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FrmPais.Designer.cs">
-      <DependentUpon>FrmPais.cs</DependentUpon>
+    <Compile Include="FrmModalPartidas.Designer.cs">
+      <DependentUpon>FrmModalPartidas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmModalSalas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmModalSalas.Designer.cs">
+      <DependentUpon>FrmModalSalas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPaises.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPaises.Designer.cs">
+      <DependentUpon>FrmPaises.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPartidas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPartidas.Designer.cs">
+      <DependentUpon>FrmPartidas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSalas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSalas.Designer.cs">
+      <DependentUpon>FrmSalas.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmHoteles.resx">
+      <DependentUpon>FrmHoteles.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmInicio.resx">
       <DependentUpon>FrmInicio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmJugadores.resx">
       <DependentUpon>FrmJugadores.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmModalHoteles.resx">
+      <DependentUpon>FrmModalHoteles.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmModalJugadores.resx">
       <DependentUpon>FrmModalJugadores.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmModalPais.resx">
-      <DependentUpon>FrmModalPais.cs</DependentUpon>
+    <EmbeddedResource Include="FrmModalPaises.resx">
+      <DependentUpon>FrmModalPaises.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmPais.resx">
-      <DependentUpon>FrmPais.cs</DependentUpon>
+    <EmbeddedResource Include="FrmModalPartidas.resx">
+      <DependentUpon>FrmModalPartidas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmModalSalas.resx">
+      <DependentUpon>FrmModalSalas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPaises.resx">
+      <DependentUpon>FrmPaises.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPartidas.resx">
+      <DependentUpon>FrmPartidas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSalas.resx">
+      <DependentUpon>FrmSalas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

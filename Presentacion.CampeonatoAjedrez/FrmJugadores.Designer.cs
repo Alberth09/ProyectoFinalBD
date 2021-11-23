@@ -86,7 +86,7 @@ namespace Presentacion.CampeonatoAjedrez
             this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.dtgJugadores);
             this.Name = "FrmJugadores";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Jugadores.";
             this.Load += new System.EventHandler(this.FrmJugadores_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgJugadores)).EndInit();

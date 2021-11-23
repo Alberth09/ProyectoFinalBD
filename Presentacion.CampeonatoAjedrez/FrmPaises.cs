@@ -5,9 +5,9 @@ using Manejadores.CampeonatoAjedrez;
 
 namespace Presentacion.CampeonatoAjedrez
 {
-    public partial class FrmPais : Form
+    public partial class FrmPaises : Form
     {
-        public FrmPais()
+        public FrmPaises()
         {
             InitializeComponent();
             manejador = new ManejadorPais();
@@ -22,7 +22,7 @@ namespace Presentacion.CampeonatoAjedrez
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            FrmModalPais modalPais = new FrmModalPais(false);
+            FrmModalPaises modalPais = new FrmModalPaises(false);
             modalPais.ShowDialog();
             Actualizar();
         }
@@ -48,7 +48,7 @@ namespace Presentacion.CampeonatoAjedrez
 
         private void dtgPaises_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            FrmModalPais modalPais = new FrmModalPais(true);
+            FrmModalPaises modalPais = new FrmModalPaises(true);
             modalPais.ShowDialog();
             Actualizar();
         }

@@ -39,6 +39,7 @@ namespace Presentacion.CampeonatoAjedrez
             this.torneoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.partidasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salidaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.salasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,14 +68,14 @@ namespace Presentacion.CampeonatoAjedrez
             // jugadoresToolStripMenuItem
             // 
             this.jugadoresToolStripMenuItem.Name = "jugadoresToolStripMenuItem";
-            this.jugadoresToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this.jugadoresToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.jugadoresToolStripMenuItem.Text = "Jugadores";
             this.jugadoresToolStripMenuItem.Click += new System.EventHandler(this.jugadoresToolStripMenuItem_Click);
             // 
             // paísesToolStripMenuItem
             // 
             this.paísesToolStripMenuItem.Name = "paísesToolStripMenuItem";
-            this.paísesToolStripMenuItem.Size = new System.Drawing.Size(127, 22);
+            this.paísesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.paísesToolStripMenuItem.Text = "Países";
             this.paísesToolStripMenuItem.Click += new System.EventHandler(this.paísesToolStripMenuItem_Click);
             // 
@@ -89,14 +90,17 @@ namespace Presentacion.CampeonatoAjedrez
             // 
             // hotelesToolStripMenuItem1
             // 
+            this.hotelesToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.salasToolStripMenuItem});
             this.hotelesToolStripMenuItem1.Name = "hotelesToolStripMenuItem1";
-            this.hotelesToolStripMenuItem1.Size = new System.Drawing.Size(148, 22);
+            this.hotelesToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
             this.hotelesToolStripMenuItem1.Text = "Hoteles";
+            this.hotelesToolStripMenuItem1.Click += new System.EventHandler(this.hotelesToolStripMenuItem1_Click);
             // 
             // reservacionesToolStripMenuItem
             // 
             this.reservacionesToolStripMenuItem.Name = "reservacionesToolStripMenuItem";
-            this.reservacionesToolStripMenuItem.Size = new System.Drawing.Size(148, 22);
+            this.reservacionesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.reservacionesToolStripMenuItem.Text = "Reservaciones";
             // 
             // torneoToolStripMenuItem
@@ -112,6 +116,7 @@ namespace Presentacion.CampeonatoAjedrez
             this.partidasToolStripMenuItem.Name = "partidasToolStripMenuItem";
             this.partidasToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.partidasToolStripMenuItem.Text = "Partidas";
+            this.partidasToolStripMenuItem.Click += new System.EventHandler(this.partidasToolStripMenuItem_Click);
             // 
             // salidaToolStripMenuItem
             // 
@@ -119,6 +124,13 @@ namespace Presentacion.CampeonatoAjedrez
             this.salidaToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.salidaToolStripMenuItem.Text = "Salida";
             this.salidaToolStripMenuItem.Click += new System.EventHandler(this.salidaToolStripMenuItem_Click);
+            // 
+            // salasToolStripMenuItem
+            // 
+            this.salasToolStripMenuItem.Name = "salasToolStripMenuItem";
+            this.salasToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.salasToolStripMenuItem.Text = "Salas";
+            this.salasToolStripMenuItem.Click += new System.EventHandler(this.salasToolStripMenuItem_Click);
             // 
             // FrmInicio
             // 
@@ -150,6 +162,7 @@ namespace Presentacion.CampeonatoAjedrez
         private System.Windows.Forms.ToolStripMenuItem hotelesToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem reservacionesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem partidasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem salasToolStripMenuItem;
     }
 }
 

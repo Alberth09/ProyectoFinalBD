@@ -15,9 +15,9 @@ namespace Manejadores.CampeonatoAjedrez
         {
             conexion.ActualizarPartida(partida);
         }
-        public void EliminarPartida(int partida)
+        public void EliminarPartida(int partida,string jornada)
         {
-            conexion.EliminarPartida(partida);
+            conexion.EliminarPartida(partida,jornada);
         }
         public List<EntidadPartida> LeerPartida()
         {

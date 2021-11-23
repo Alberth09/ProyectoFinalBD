@@ -37,7 +37,6 @@ namespace Presentacion.CampeonatoAjedrez
             {
                 GuardarParticipante();
             }
-            Limpiar();
         }
 
         void GuardarParticipante()
@@ -55,6 +54,7 @@ namespace Presentacion.CampeonatoAjedrez
             };
 
             manejador.GuardarParticipante(entidad);
+            Limpiar();
         }
 
         void ActualizarParticipante()
@@ -72,6 +72,7 @@ namespace Presentacion.CampeonatoAjedrez
             };
 
             manejador.ActualizarParticipante(entidad);
+            Limpiar();
         }
 
         private void rbArbitro_CheckedChanged(object sender, EventArgs e)

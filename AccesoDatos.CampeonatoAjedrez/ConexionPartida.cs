@@ -36,7 +36,7 @@ namespace AccesoDatos.CampeonatoAjedrez
         {
             try
             {
-                string consulta = string.Format("UPDATE partida SET codigoPartida='{0}',jornada='{1}',fkIDArbitro={2},fkIDSala={3},entradas={4} WHERE idPartida={5}",partida.CodigoPartida,partida.Jornada,partida.FkIDArbitro,partida.FkIDSala,partida.Entradas,partida.IDPartida);
+                string consulta = string.Format("UPDATE partida SET codigoPartida='{0}',fkIDArbitro={1},fkIDSala={2},entradas={3} WHERE idPartida={4} AND jornada='{5}'", partida.CodigoPartida,partida.FkIDArbitro,partida.FkIDSala,partida.Entradas,partida.IDPartida, partida.Jornada);
                 conexion.EjecutarConsulta(consulta);
             }
             catch (Exception ex)
@@ -44,11 +44,11 @@ namespace AccesoDatos.CampeonatoAjedrez
                 MessageBox.Show("No se pudo actualizar: " + ex.Message, "Error");
             }
         }
-        public void EliminarPartida(int partida)
+        public void EliminarPartida(int partida,string jornada)
         {
             try
             {
-                string consulta = string.Format("DELETE FROM partida WHERE idPartida={0}", partida);
+                string consulta = string.Format("DELETE FROM partida WHERE idPartida={0} AND jornada='{1}'", partida,jornada);
                 conexion.EjecutarConsulta(consulta);
             }
             catch (Exception ex)
@@ -64,7 +64,7 @@ namespace AccesoDatos.CampeonatoAjedrez
             var dt = new DataTable();
             try
             {
-                string consulta = string.Format("SELECT * FROM partida");
+                string consulta = string.Format("SELECT *, DATE_FORMAT(jornada,'%Y/%m/%d') as fecha FROM partida");
                 ds = conexion.ObtenerDatos(consulta, "partida");
                 dt = ds.Tables[0];
 
@@ -74,7 +74,7 @@ namespace AccesoDatos.CampeonatoAjedrez
                     {
                         IDPartida = int.Parse(row["idPartida"].ToString()),
                         CodigoPartida = row["codigoPartida"].ToString(),
-                        Jornada = row["jornada"].ToString(),
+                        Jornada = (row["fecha"].ToString()),
                         FkIDArbitro = int.Parse(row["fkIDArbitro"].ToString()),
                         FkIDSala = int.Parse(row["fkIDSala"].ToString())
                     };

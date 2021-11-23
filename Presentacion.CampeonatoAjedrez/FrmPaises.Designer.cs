@@ -1,7 +1,7 @@
 ﻿
 namespace Presentacion.CampeonatoAjedrez
 {
-    partial class FrmPais
+    partial class FrmPaises
     {
         /// <summary>
         /// Required designer variable.
@@ -76,17 +76,17 @@ namespace Presentacion.CampeonatoAjedrez
             this.btnRegistrar.UseVisualStyleBackColor = true;
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
-            // FrmPais
+            // FrmPaises
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(593, 399);
+            this.ClientSize = new System.Drawing.Size(594, 401);
             this.ControlBox = false;
             this.Controls.Add(this.btnAtras);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.dtgPaises);
-            this.Name = "FrmPais";
+            this.Name = "FrmPaises";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Países.";
             this.Load += new System.EventHandler(this.FrmPais_Load);

@@ -5,9 +5,9 @@ using Manejadores.CampeonatoAjedrez;
 
 namespace Presentacion.CampeonatoAjedrez
 {
-    public partial class FrmModalPais : Form
+    public partial class FrmModalPaises : Form
     {
-        public FrmModalPais(bool upd)
+        public FrmModalPaises(bool upd)
         {
             InitializeComponent();
             manejador = new ManejadorPais();
@@ -28,7 +28,7 @@ namespace Presentacion.CampeonatoAjedrez
         {
             txtID.Clear();
             txtNombre.Clear();
-            numClubes.ResetText();
+            numClubes.Value = 0;
             txtRepresenta.Clear();
         }
 
@@ -43,6 +43,7 @@ namespace Presentacion.CampeonatoAjedrez
             };
 
             manejador.GuardarPais(entidad);
+            Limpiar();
         }
 
         void ActualizarPais()
@@ -56,6 +57,7 @@ namespace Presentacion.CampeonatoAjedrez
             };
 
             manejador.ActualizarPais(entidad);
+            Limpiar();
         }
 
         private void btnGuardar_Click(object sender, EventArgs e)
@@ -68,7 +70,6 @@ namespace Presentacion.CampeonatoAjedrez
             {
                 GuardarPais();
             }
-            Limpiar();
         }
     }
 }
