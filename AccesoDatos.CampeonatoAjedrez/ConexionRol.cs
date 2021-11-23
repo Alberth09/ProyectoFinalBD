@@ -25,7 +25,7 @@ namespace AccesoDatos.CampeonatoAjedrez
         {
             try
             {
-                string consulta = string.Format("INSERT INTO rol VALUES({0},{1},'{2}',{3})",rol.FkIDPartida,rol.FkIDParticipante,rol.FkJornada,rol.Color);
+                string consulta = string.Format("INSERT INTO rol VALUES({0},'{1}',{2},{3})", rol.FkIDPartida, rol.FkJornada, rol.FkIDParticipante,rol.Color);
                 conexion.EjecutarConsulta(consulta);
             }
             catch (Exception ex)
@@ -33,20 +33,6 @@ namespace AccesoDatos.CampeonatoAjedrez
                 MessageBox.Show("No se pudo guardar: " + ex.Message, "Error");
             }
         }
-
-        //public void ActualizarRol(EntidadRol rol)
-        //{
-        //    try
-        //    {
-        //        string consulta = string.Format("UPDATE rol SET color={0} WHERE fkIDPartida={1} AND fkIDparticipante={2}",rol.Color,rol.FkIDPartida,rol.FkIDParticipante);
-        //        conexion.EjecutarConsulta(consulta);
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        MessageBox.Show("No se pudo actualizar: " + ex.Message, "Error");
-        //    }
-        //}
-
 
         public void EliminarRol(int id,string jornada,string color)
         {
@@ -79,7 +65,7 @@ namespace AccesoDatos.CampeonatoAjedrez
                         FkIDPartida = int.Parse(row["fkIDPartida"].ToString()),
                         FkJornada = row["andoHorny"].ToString(),
                         FkIDParticipante = int.Parse(row["fkIDParticipante"].ToString()),
-                        Color = int.Parse(row["color"].ToString())
+                        Color = row["color"].ToString()
                     };
                     ListaResultados.Add(entidad);
                 }

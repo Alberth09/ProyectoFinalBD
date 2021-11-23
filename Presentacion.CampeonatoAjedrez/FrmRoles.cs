@@ -29,7 +29,7 @@ namespace Presentacion.CampeonatoAjedrez
             string jornada = dtgRoles.CurrentRow.Cells["FkJornada"].Value.ToString();
             string color = dtgRoles.CurrentRow.Cells["Color"].Value.ToString();
 
-            if (MessageBox.Show("¿Desea eliminar la siguiente paí de la lista?", "Aviso.", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show("¿Desea eliminar el siguiente rol de la lista?", "Aviso.", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 manejador.EliminarRol(id, jornada,color);
             }
@@ -40,6 +40,7 @@ namespace Presentacion.CampeonatoAjedrez
         {
             FrmModalRoles modalRoles = new FrmModalRoles();
             modalRoles.ShowDialog();
+            Actualizar();
         }
 
         private void btnAtras_Click(object sender, EventArgs e)

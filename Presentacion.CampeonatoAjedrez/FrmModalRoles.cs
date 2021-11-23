@@ -44,7 +44,7 @@ namespace Presentacion.CampeonatoAjedrez
                 FkIDPartida = int.Parse(txtPartida.Text),
                 FkJornada = txtJornada.Text,
                 FkIDParticipante = int.Parse(txtParticipante.Text),
-                Color = color
+                Color = color.ToString()
             };
 
             manejador.GuardarRol(entidad);

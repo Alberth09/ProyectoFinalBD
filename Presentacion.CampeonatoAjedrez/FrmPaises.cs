@@ -52,5 +52,10 @@ namespace Presentacion.CampeonatoAjedrez
             modalPais.ShowDialog();
             Actualizar();
         }
+
+        private void dtgPaises_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

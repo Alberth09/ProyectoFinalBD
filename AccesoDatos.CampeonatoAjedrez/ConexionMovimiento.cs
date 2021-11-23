@@ -24,7 +24,7 @@ namespace AccesoDatos.CampeonatoAjedrez
         {
             try
             {
-                string consulta = string.Format("INSERT INTO movimiento VALUES({0},{1},'{2}','{3}','{4}')",movimiento.IDMovimiento,movimiento.FkIDPartida,movimiento.Movimiento,movimiento.Jugada,movimiento.Comentario);
+                string consulta = string.Format("INSERT INTO movimiento VALUES({0},{1},'{2}','{3}','{4}','{5}')",movimiento.IDMovimiento,movimiento.FkIDPartida,movimiento.FkJornada,movimiento.Movimiento,movimiento.Jugada,movimiento.Comentario);
                 conexion.EjecutarConsulta(consulta);
             }
             catch (Exception ex)
@@ -32,23 +32,12 @@ namespace AccesoDatos.CampeonatoAjedrez
                 MessageBox.Show("No se pudo guardar: " + ex.Message, "Error");
             }
         }
-        public void ActualizarMovimiento(EntidadMovimiento movimiento)
+       
+        public void EliminarMovimiento(int movimiento,int partida,string jornada)
         {
             try
             {
-                string consulta = string.Format("UPDATE movimiento SET fkIDPartida={0},movimiento='{1}',jugada='{2}',comentario='{3}' WHERE idMovimiento={4}",movimiento.FkIDPartida,movimiento.Movimiento,movimiento.Jugada,movimiento.Comentario,movimiento.IDMovimiento);
-                conexion.EjecutarConsulta(consulta);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("No se pudo actualizar: " + ex.Message, "Error");
-            }
-        }
-        public void EliminarMovimiento(int movimiento)
-        {
-            try
-            {
-                string consulta = string.Format("DELETE FROM movimiento WHERE idMovimiento={0}", movimiento);
+                string consulta = string.Format("DELETE FROM movimiento WHERE idMovimiento={0} AND fkidPartida={1} AND fkJornada='{2}'", movimiento,partida,jornada);
                 conexion.EjecutarConsulta(consulta);
             }
             catch (Exception ex)
@@ -64,7 +53,7 @@ namespace AccesoDatos.CampeonatoAjedrez
             var dt = new DataTable();
             try
             {
-                string consulta = string.Format("SELECT * FROM movimiento");
+                string consulta = string.Format("SELECT *,DATE_FORMAT(Fkjornada,'%Y/%m/%d') as jorny FROM movimiento");
                 ds = conexion.ObtenerDatos(consulta, "movimiento");
                 dt = ds.Tables[0];
 
@@ -74,6 +63,7 @@ namespace AccesoDatos.CampeonatoAjedrez
                     {
                         IDMovimiento = int.Parse(row["idMovimiento"].ToString()),
                         FkIDPartida = int.Parse(row["fkIDPartida"].ToString()),
+                        FkJornada = row["jorny"].ToString(),
                         Movimiento = row["movimiento"].ToString(),
                         Jugada = row["jugada"].ToString(),
                         Comentario = row["comentario"].ToString()

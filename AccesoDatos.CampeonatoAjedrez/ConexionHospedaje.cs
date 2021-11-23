@@ -53,7 +53,7 @@ namespace AccesoDatos.CampeonatoAjedrez
             var dt = new DataTable();
             try
             {
-                string consulta = string.Format("SELECT * FROM hospedaje");
+                string consulta = string.Format("SELECT *, DATE_FORMAT(fechaEntrada,'%Y/%m/%d') AS inpu, DATE_FORMAT(fechaSalida,'%Y/%m/%d') AS oupu FROM hospedaje");
                 ds = conexion.ObtenerDatos(consulta, "hospedaje");
                 dt = ds.Tables[0];
 
@@ -65,8 +65,8 @@ namespace AccesoDatos.CampeonatoAjedrez
                         FkIDParticipante = int.Parse(row["fkIDParticipante"].ToString()),
                         FkCampeonato = row["fkCampeonato"].ToString(),
                         FkIDHotel = int.Parse(row["fkIDHotel"].ToString()),
-                        FechaEntrada = row["fechaEntrada"].ToString(),
-                        FechaSalida = row["fechaSalida"].ToString()
+                        FechaEntrada = row["inpu"].ToString(),
+                        FechaSalida = row["oupu"].ToString()
                     };
                     ListaResultados.Add(entidad);
                 }

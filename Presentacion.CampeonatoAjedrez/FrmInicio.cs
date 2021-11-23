@@ -56,5 +56,11 @@ namespace Presentacion.CampeonatoAjedrez
             FrmHospedajes hospedajes = new FrmHospedajes();
             hospedajes.Show();
         }
+
+        private void movimientosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmMovimientos movimientos = new FrmMovimientos();
+            movimientos.Show();
+        }
     }
 }

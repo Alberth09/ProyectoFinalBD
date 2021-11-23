@@ -11,13 +11,9 @@ namespace Manejadores.CampeonatoAjedrez
         {
             conexion.GuardarMovimiento(movimiento);
         }
-        public void ActualizarMovimiento(EntidadMovimiento movimiento)
+        public void EliminarMovimiento(int movimiento,int partida,string jornada)
         {
-            conexion.ActualizarMovimiento(movimiento);
-        }
-        public void EliminarMovimiento(int movimiento)
-        {
-            conexion.EliminarMovimiento(movimiento);
+            conexion.EliminarMovimiento(movimiento,partida,jornada);
         }
         public List<EntidadMovimiento> LeerMovimiento()
         {

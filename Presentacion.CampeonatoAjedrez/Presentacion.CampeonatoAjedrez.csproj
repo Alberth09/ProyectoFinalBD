@@ -111,6 +111,12 @@
     <Compile Include="FrmModalJugadores.Designer.cs">
       <DependentUpon>FrmModalJugadores.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmModalMovimientos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmModalMovimientos.Designer.cs">
+      <DependentUpon>FrmModalMovimientos.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmModalPaises.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +140,12 @@
     </Compile>
     <Compile Include="FrmModalSalas.Designer.cs">
       <DependentUpon>FrmModalSalas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMovimientos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMovimientos.Designer.cs">
+      <DependentUpon>FrmMovimientos.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmPaises.cs">
       <SubType>Form</SubType>
@@ -182,6 +194,9 @@
     <EmbeddedResource Include="FrmModalJugadores.resx">
       <DependentUpon>FrmModalJugadores.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmModalMovimientos.resx">
+      <DependentUpon>FrmModalMovimientos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmModalPaises.resx">
       <DependentUpon>FrmModalPaises.cs</DependentUpon>
     </EmbeddedResource>
@@ -193,6 +208,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmModalSalas.resx">
       <DependentUpon>FrmModalSalas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMovimientos.resx">
+      <DependentUpon>FrmMovimientos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPaises.resx">
       <DependentUpon>FrmPaises.cs</DependentUpon>
