@@ -44,5 +44,17 @@ namespace Presentacion.CampeonatoAjedrez
             FrmSalas salas = new FrmSalas();
             salas.Show();
         }
+
+        private void rolesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmRoles roles = new FrmRoles();
+            roles.Show();
+        }
+
+        private void reservacionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmHospedajes hospedajes = new FrmHospedajes();
+            hospedajes.Show();
+        }
     }
 }

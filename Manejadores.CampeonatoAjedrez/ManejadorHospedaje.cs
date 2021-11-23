@@ -11,10 +11,6 @@ namespace Manejadores.CampeonatoAjedrez
         {
             conexion.GuardarHospedaje(hospedaje);
         }
-        public void ActualizarHospedaje(EntidadHospedaje hospedaje)
-        {
-            conexion.ActualizarHospedaje(hospedaje);
-        }
         public void EliminarHospedaje(int hospedaje)
         {
             conexion.EliminarHospedaje(hospedaje);

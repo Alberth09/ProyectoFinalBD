@@ -11,13 +11,15 @@ namespace Manejadores.CampeonatoAjedrez
         {
             conexion.GuardarRol(rol);
         }
-        public void ActualizarRol(EntidadRol rol)
+
+        //public void ActualizarRol(EntidadRol rol)
+        //{
+        //    conexion.ActualizarRol(rol);
+        //}
+
+        public void EliminarRol(int id,string jornada,string color)
         {
-            conexion.ActualizarRol(rol);
-        }
-        public void EliminarRol(int rol)
-        {
-            conexion.EliminarRol(rol);
+            conexion.EliminarRol(id,jornada,color);
         }
         public List<EntidadRol> LeerRol()
         {

@@ -20,11 +20,12 @@ namespace AccesoDatos.CampeonatoAjedrez
                 MessageBox.Show("Error en la conexión: " + ex.Message, "Error.");
             }
         }
+
         public void GuardarRol(EntidadRol rol)
         {
             try
             {
-                string consulta = string.Format("INSERT INTO rol VALUES({0},{1},{2})",rol.FkIDPartida,rol.FkIDParticipante,rol.Color);
+                string consulta = string.Format("INSERT INTO rol VALUES({0},{1},'{2}',{3})",rol.FkIDPartida,rol.FkIDParticipante,rol.FkJornada,rol.Color);
                 conexion.EjecutarConsulta(consulta);
             }
             catch (Exception ex)
@@ -32,23 +33,26 @@ namespace AccesoDatos.CampeonatoAjedrez
                 MessageBox.Show("No se pudo guardar: " + ex.Message, "Error");
             }
         }
-        public void ActualizarRol(EntidadRol rol)
+
+        //public void ActualizarRol(EntidadRol rol)
+        //{
+        //    try
+        //    {
+        //        string consulta = string.Format("UPDATE rol SET color={0} WHERE fkIDPartida={1} AND fkIDparticipante={2}",rol.Color,rol.FkIDPartida,rol.FkIDParticipante);
+        //        conexion.EjecutarConsulta(consulta);
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        MessageBox.Show("No se pudo actualizar: " + ex.Message, "Error");
+        //    }
+        //}
+
+
+        public void EliminarRol(int id,string jornada,string color)
         {
             try
             {
-                string consulta = string.Format("UPDATE rol SET color={0} WHERE fkIDPartida={1} AND fkIDparticipante={2}",rol.Color,rol.FkIDPartida,rol.FkIDParticipante);
-                conexion.EjecutarConsulta(consulta);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("No se pudo actualizar: " + ex.Message, "Error");
-            }
-        }
-        public void EliminarRol(int rol)
-        {
-            try
-            {
-                string consulta = string.Format("DELETE FROM rol WHERE idPartida={0}",rol);
+                string consulta = string.Format("DELETE FROM rol WHERE fkidPartida={0} AND jornada={1} AND color='{2}'",id,jornada,color);
                 conexion.EjecutarConsulta(consulta);
             }
             catch (Exception ex)
@@ -64,7 +68,7 @@ namespace AccesoDatos.CampeonatoAjedrez
             var dt = new DataTable();
             try
             {
-                string consulta = string.Format("SELECT * FROM rol");
+                string consulta = string.Format("SELECT *, DATE_FORMAT(fkjornada,'%Y/%m/%d') as andoHorny FROM rol");
                 ds = conexion.ObtenerDatos(consulta, "rol");
                 dt = ds.Tables[0];
 
@@ -73,6 +77,7 @@ namespace AccesoDatos.CampeonatoAjedrez
                     var entidad = new EntidadRol
                     {
                         FkIDPartida = int.Parse(row["fkIDPartida"].ToString()),
+                        FkJornada = row["andoHorny"].ToString(),
                         FkIDParticipante = int.Parse(row["fkIDParticipante"].ToString()),
                         Color = int.Parse(row["color"].ToString())
                     };

@@ -35,7 +35,7 @@ namespace Presentacion.CampeonatoAjedrez
         {
             int id = int.Parse(dtgPartidas.CurrentRow.Cells["IDpartida"].Value.ToString());
             string jornada = dtgPartidas.CurrentRow.Cells["Jornada"].Value.ToString();
-            if (MessageBox.Show("¿Desea eliminar la siguiente paí de la lista?", "Aviso.", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show("¿Desea eliminar la siguiente partida de la lista?", "Aviso.", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 manejador.EliminarPartida(id,jornada);
             }

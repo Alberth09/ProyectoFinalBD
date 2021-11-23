@@ -24,7 +24,7 @@ namespace AccesoDatos.CampeonatoAjedrez
         {
             try
             {
-                string consulta = string.Format("INSERT INTO hospedaje VALUES({0},{1},{2},'{3}','{4}')",hospedaje.IDHospedaje,hospedaje.FkIDParticipante,hospedaje.FkIDHotel,hospedaje.FechaEntrada,hospedaje.FechaSalida);
+                string consulta = string.Format("INSERT INTO hospedaje VALUES({0},{1},'{2}',{3},'{4}','{5}')",hospedaje.IDHospedaje,hospedaje.FkIDParticipante,hospedaje.FkCampeonato,hospedaje.FkIDHotel,hospedaje.FechaEntrada,hospedaje.FechaSalida);
                 conexion.EjecutarConsulta(consulta);
             }
             catch (Exception ex)
@@ -32,18 +32,7 @@ namespace AccesoDatos.CampeonatoAjedrez
                 MessageBox.Show("No se pudo guardar: " + ex.Message, "Error");
             }
         }
-        public void ActualizarHospedaje(EntidadHospedaje hospedaje)
-        {
-            try
-            {
-                string consulta = string.Format("UPDATE hospedaje SET fkIDParticipante={0},fkIDHotel={1},fechaEntrada='{2}',fechaSalida='{3}' WHERE idHospedaje={4}", hospedaje.FkIDParticipante, hospedaje.FkIDHotel, hospedaje.FechaEntrada,hospedaje.FechaSalida,hospedaje.IDHospedaje);
-                conexion.EjecutarConsulta(consulta);
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("No se pudo actualizar: " + ex.Message, "Error");
-            }
-        }
+
         public void EliminarHospedaje(int hospedaje)
         {
             try
@@ -74,6 +63,7 @@ namespace AccesoDatos.CampeonatoAjedrez
                     {
                         IDHospedaje = int.Parse(row["idHospedaje"].ToString()),
                         FkIDParticipante = int.Parse(row["fkIDParticipante"].ToString()),
+                        FkCampeonato = row["fkCampeonato"].ToString(),
                         FkIDHotel = int.Parse(row["fkIDHotel"].ToString()),
                         FechaEntrada = row["fechaEntrada"].ToString(),
                         FechaSalida = row["fechaSalida"].ToString()

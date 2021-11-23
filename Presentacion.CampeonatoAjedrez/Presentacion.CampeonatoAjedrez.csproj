@@ -69,6 +69,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmHospedajes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmHospedajes.Designer.cs">
+      <DependentUpon>FrmHospedajes.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmHoteles.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +92,12 @@
     </Compile>
     <Compile Include="FrmJugadores.Designer.cs">
       <DependentUpon>FrmJugadores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmModalHospedajes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmModalHospedajes.Designer.cs">
+      <DependentUpon>FrmModalHospedajes.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmModalHoteles.cs">
       <SubType>Form</SubType>
@@ -111,6 +123,12 @@
     <Compile Include="FrmModalPartidas.Designer.cs">
       <DependentUpon>FrmModalPartidas.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmModalRoles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmModalRoles.Designer.cs">
+      <DependentUpon>FrmModalRoles.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmModalSalas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +147,12 @@
     <Compile Include="FrmPartidas.Designer.cs">
       <DependentUpon>FrmPartidas.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmRoles.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRoles.Designer.cs">
+      <DependentUpon>FrmRoles.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmSalas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -137,6 +161,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmHospedajes.resx">
+      <DependentUpon>FrmHospedajes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmHoteles.resx">
       <DependentUpon>FrmHoteles.cs</DependentUpon>
     </EmbeddedResource>
@@ -145,6 +172,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmJugadores.resx">
       <DependentUpon>FrmJugadores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmModalHospedajes.resx">
+      <DependentUpon>FrmModalHospedajes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmModalHoteles.resx">
       <DependentUpon>FrmModalHoteles.cs</DependentUpon>
@@ -158,6 +188,9 @@
     <EmbeddedResource Include="FrmModalPartidas.resx">
       <DependentUpon>FrmModalPartidas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmModalRoles.resx">
+      <DependentUpon>FrmModalRoles.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmModalSalas.resx">
       <DependentUpon>FrmModalSalas.cs</DependentUpon>
     </EmbeddedResource>
@@ -166,6 +199,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPartidas.resx">
       <DependentUpon>FrmPartidas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRoles.resx">
+      <DependentUpon>FrmRoles.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmSalas.resx">
       <DependentUpon>FrmSalas.cs</DependentUpon>

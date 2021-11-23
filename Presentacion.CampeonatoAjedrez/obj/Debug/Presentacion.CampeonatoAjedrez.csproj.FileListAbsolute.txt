@@ -42,3 +42,7 @@ C:\Users\Hp\source\repos\CampeonatoAjedrez\Presentacion.CampeonatoAjedrez\obj\De
 C:\Users\Hp\source\repos\CampeonatoAjedrez\Presentacion.CampeonatoAjedrez\obj\Debug\Presentacion.CampeonatoAjedrez.FrmPartidas.resources
 C:\Users\Hp\source\repos\CampeonatoAjedrez\Presentacion.CampeonatoAjedrez\obj\Debug\Presentacion.CampeonatoAjedrez.FrmModalSalas.resources
 C:\Users\Hp\source\repos\CampeonatoAjedrez\Presentacion.CampeonatoAjedrez\obj\Debug\Presentacion.CampeonatoAjedrez.FrmSalas.resources
+C:\Users\Hp\source\repos\CampeonatoAjedrez\Presentacion.CampeonatoAjedrez\obj\Debug\Presentacion.CampeonatoAjedrez.FrmRoles.resources
+C:\Users\Hp\source\repos\CampeonatoAjedrez\Presentacion.CampeonatoAjedrez\obj\Debug\Presentacion.CampeonatoAjedrez.FrmModalRoles.resources
+C:\Users\Hp\source\repos\CampeonatoAjedrez\Presentacion.CampeonatoAjedrez\obj\Debug\Presentacion.CampeonatoAjedrez.FrmHospedajes.resources
+C:\Users\Hp\source\repos\CampeonatoAjedrez\Presentacion.CampeonatoAjedrez\obj\Debug\Presentacion.CampeonatoAjedrez.FrmModalHospedajes.resources
